@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-
   before do
     @user = User.create(name: 'Tom', photo: 'photo', bio: 'Teacher from Mexico', postsCounter: 0)
     @posts = []
