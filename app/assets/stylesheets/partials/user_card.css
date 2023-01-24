@@ -1,4 +1,4 @@
-li {
+.user-card {
   display: flex;
 }
 
@@ -10,19 +10,19 @@ li {
   padding: 5px;
 }
 
-div {
+.user-information {
   display: flex;
   border: solid 2.5px black;
   margin: 25px;
   width: 350px;
 }
 
-h2 {
+.user-name {
   align-items: center;
   padding: 10px;
 }
 
-h4 {
+.user-number-of-posts {
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
