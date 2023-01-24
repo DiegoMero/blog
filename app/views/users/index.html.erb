@@ -1,1 +1,6 @@
-<h1>Here is a list of users</h1>
+<%= stylesheet_link_tag "users_index" %>
+<ul>
+  <% @users.each do |user| %>
+    <%= render 'partials/user_card', user: user %>
+  <% end %>
+</ul>
