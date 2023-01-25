@@ -8,4 +8,6 @@
     <li><%= render 'partials/post_card', post: post, index: index %></li>
   <% end %>
 </ul>
-<button class='all-posts-button'>See all posts</button>
+<%= link_to user_posts_path(@user) do %>
+  <button class='all-posts-button'>See all posts</button>
+<% end %>

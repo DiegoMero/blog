@@ -1,8 +1,10 @@
 <%= render 'partials/user_card', user: @user %>
 <ul class='posts-list'>
-  <% @posts.each_with_index do |post, index| %>
+  <% @posts.each do |post| %>
     <li>
-      <%= render 'partials/post_card', post: post, index: index %>
+      <%= link_to "/users/#{@user.id}/posts/#{post.id}" do %>
+        <%= render 'partials/post_card', post: post %>
+      <% end %>
       <% if post.commentsCounter > 0 %>
         <div class='comments-box'>
           <% @comments = post.five_most_recent_comments %>
