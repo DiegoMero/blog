@@ -16,7 +16,7 @@ RSpec.describe 'Post', type: :system do
 
       visit "/users/#{@user.id}/posts"
     end
-    
+
     it 'shows profile picture of the user' do
       expect(page).to have_content(@user.photo)
     end
