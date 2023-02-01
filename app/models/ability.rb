@@ -26,6 +26,8 @@ class Ability
     #
     # See the wiki for details:
     # https://github.com/CanCanCommunity/cancancan/blob/develop/docs/define_check_abilities.md
+    return if user.blank?
+
     can :destroy, Post do |post|
       post.author == user || user.role == 'admin'
     end
