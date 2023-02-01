@@ -30,6 +30,9 @@ gem 'jbuilder'
 # Devise for login authentication
 gem 'devise'
 
+# CanCanCan for authorization
+gem 'cancancan'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
