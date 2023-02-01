@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Ability
   include CanCan::Ability
 
@@ -29,7 +27,11 @@ class Ability
     # See the wiki for details:
     # https://github.com/CanCanCommunity/cancancan/blob/develop/docs/define_check_abilities.md
     can :destroy, Post do |post|
-      post.author == user || user.role == "admin"
+      post.author == user || user.role == 'admin'
+    end
+
+    can :destroy, Comment do |comment|
+      comment.author == user || user.role == 'admin'
     end
   end
 end
