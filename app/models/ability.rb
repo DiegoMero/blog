@@ -28,10 +28,8 @@ class Ability
     #
     # See the wiki for details:
     # https://github.com/CanCanCommunity/cancancan/blob/develop/docs/define_check_abilities.md
-    can :manage, :all if user.role == "admin"
-
     can :destroy, Post do |post|
-      post.author == user
+      post.author == user || user.role == "admin"
     end
   end
 end
